@@ -4,8 +4,10 @@
     box-sizing: border-box;
 }
 
-body {
+body, html {
     font-family: 'Roboto', sans-serif;
+    height: 100%;
+    margin: 0;
 }
 
 .navbrand img{
@@ -19,6 +21,7 @@ body {
     padding-right: 7px;
 }
 
+
 .navbar a{
     text-decoration: none;
     color: black;
@@ -30,7 +33,7 @@ body {
 .navbar a.active::after {
     content: '';
     position: absolute;
-    width: 100%; /* Sublinierea completă pentru pagina activă */
+    width: 100%; 
     height: 2px;
     background-color: black;
     left: 0;
@@ -49,7 +52,11 @@ body {
 }
 
 .navbar a:hover::after {
-    width: 100%; /* Sublinierea se extinde complet la hover */
+    width: 100%; 
+}
+
+.navbrand a:hover::after{
+    width: 0;
 }
 
 .navbar{
@@ -63,6 +70,7 @@ body {
 nav{
     background-color: rgba(236, 236, 236, 0.39);
 }
+
 .carousel{
     display: flex;
     justify-content: center;
@@ -106,17 +114,6 @@ nav{
     border-radius: 50%;
 }
 
-/*.poveste{
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    margin-top: 100px;
-    margin-left: 250px;
-    margin-right: 250px;
-    font-size: 18px;
-}*/
-
-
 .cards{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -124,6 +121,7 @@ nav{
     justify-items: center;
     gap: 0;
     padding: 0;
+    margin: 0;
 }
 
 .invisible{
@@ -137,7 +135,7 @@ nav{
 
 .card-container{
     margin: 0;
-    background-color: gray;
+    background-color: #c8d4cf9c;
     width: 400px;
     height: 400px;
     text-align: center;
@@ -150,6 +148,140 @@ nav{
 
 .card-area h1{
     text-align: center;
-    font-size: 64px;
-    margin-bottom: 100px;
+    font-size: 54px;
+    margin-bottom: 80px;
+}
+
+.card-title{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 5px solid black;
+    background-color: #a7b6b0b6;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+}
+
+.card-content{
+    padding-top: 15px !important;
+    text-align: center;
+
+}
+
+.card-content img{
+    padding-top: 20px;
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: #28353073;
+    margin-top: 50px;
+    align-items: center;
+    align-self: center;
+}
+
+footer a{
+    color: black;
+}
+
+.description{
+    margin-top: 70px;
+    margin-left: 25%;
+    margin-right: 25%;
+    font-size: 18px;
+}
+
+.faq-section {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.faq-item {
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+.faq-question {
+    width: 100%;
+    padding: 15px;
+    text-align: left;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #f7f7f7;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s ease;
+    border-radius: 8px;
+}
+
+.faq-question:hover {
+    background-color: #e0e0e0;
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background-color: #fff;
+    padding: 0 15px;
+}
+
+.faq-answer p {
+    padding: 10px 0;
+    margin: 0;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 100px;
+    padding: 15px;
+}
+
+.istoric {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.ist_img {
+    text-align: center;
+    margin: 10px 0;
+}
+.ist_img img {
+    max-width: 250px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.istoric p{
+    margin: 10px 0;
+}
+
+.istoric h2{
+    margin-top: 30px;
+}
+
+.bg {
+    background-image: url("assets/history.jpg");
+    height: 95%; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg h1{
+    position: absolute;
+    padding-left: 25px;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    color: rgb(194, 194, 194);
+    font-size: 50px;
+
 }
