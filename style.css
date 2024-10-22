@@ -56,7 +56,7 @@ body, html {
 }
 
 .navbrand a:hover::after{
-    width: 0;
+    width: 100%;
 }
 
 .navbar{
@@ -76,6 +76,7 @@ nav{
     justify-content: center;
     align-items: center;
     height: 800px;
+    overflow: hidden;
 }
 
 .carousel-container {
@@ -114,13 +115,6 @@ nav{
     border-radius: 50%;
 }
 
-.cards{
-    justify-items: center;
-    gap: 0;
-    padding: 0;
-    margin: 0;
-}
-
 .invisible{
     background-color: white !important;
 }
@@ -142,12 +136,6 @@ nav{
 .card-area{
     margin: auto;
     margin-top: 120px;
-}
-
-.card-area h1{
-    text-align: center;
-    font-size: 54px;
-    margin-bottom: 80px;
 }
 
 .card-title{
@@ -249,21 +237,38 @@ footer a{
 
 .ist_img {
     text-align: center;
-    margin: 10px 0;
+    margin-top: 10px;
+    position: relative; 
 }
+
 .ist_img img {
     max-width: 250px;
     height: auto;
     border-radius: 5px;
+    animation: moveDown 1s linear infinite; 
 }
 
-.istoric p{
+@keyframes moveDown {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(20px); 
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.istoric p {
     margin: 10px 0;
 }
 
-.istoric h2{
+.istoric h2 {
     margin-top: 30px;
+    flex: 1;
 }
+
 
 .bg {
     background-image: url("assets/history.jpg");
@@ -282,4 +287,48 @@ footer a{
     color: rgb(194, 194, 194);
     font-size: 50px;
 
+}
+
+.dev_cards{
+    margin: auto;
+    text-align: center;
+}
+
+.dev_cards td{
+    padding-left: 25px;
+    padding-top: 50px;
+}
+
+.dev_cardbody {
+    background-color: #95afbaab;
+    padding: 20px 20px 10px 25px;
+    border-radius: 16px;
+    transition: 0.5s;
+}
+
+.dev_cardbody:hover{
+    box-shadow: -5px 5px 28px -7px rgba(0,0,0,0.62);
+    border-radius: 25px;
+}
+
+.dev_cards a{
+    color: black;
+    text-decoration: none;
+}
+
+.dev_cardtitle{
+    font-size: 14px;
+    background-color: white;
+    text-align: center;
+    width: 50%;
+    margin: auto;
+    border-radius: 16px;
+    margin-top: 25px;
+    padding: 10px;
+}
+
+.bigtitle{
+    margin-top: 50px;
+    font-size: 45px;
+    text-align: center;
 }
