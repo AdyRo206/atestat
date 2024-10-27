@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1250, initial-scale=1.0">
+    <title>Samsung | Atestat</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <nav>
+        <div class="navbar">
+            <div class="navbrand">
+                <a href="../index.html"><img src="../assets/logo.jpg" alt="Logo"></a>
+            </div>
+            <ul>
+                <li><a href="../istoric.html">Istoric</a></li>
+                <li><a href="../dispozitive.html" class="active"> Dispozitive</a></li>
+                <li><a href="#">Ecosistem Samsung</a></li>
+                <li><a href="#">Aplicații & UI </a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<div class="comparare">
+    <div class="selector">
+        <div>
+            <label for="telefon1">Telefon 1:</label>
+            <select id="telefon1">
+                <option value="Galaxy S24">Galaxy S24</option>
+                <option value="Galaxy S24 Plus">Galaxy S24 Plus</option>
+                <option value="Galaxy S24 FE">Galaxy S24 FE</option>
+                <option value="Galaxy S24 Ultra">Galaxy S24 Ultra</option>
+                <option value="Galaxy Z Fold6">Galaxy Z Fold6</option>
+                <option value="Galaxy Z Flip6">Galaxy Z Flip6</option>
+                <option value="Galaxy A35">Galaxy A35</option>
+                <option value="Galaxy A55">Galaxy A55</option>
+            </select>
+        </div>
+    
+        <div>
+            <label for="telefon2">Telefon 2:</label>
+            <select id="telefon2">
+                <option value="Galaxy S24">Galaxy S24</option>
+                <option value="Galaxy S24 Plus">Galaxy S24 Plus</option>
+                <option value="Galaxy S24 FE">Galaxy S24 FE</option>
+                <option value="Galaxy S24 Ultra">Galaxy S24 Ultra</option>
+                <option value="Galaxy Z Fold6">Galaxy Z Fold6</option>
+                <option value="Galaxy Z Flip6">Galaxy Z Flip6</option>
+                <option value="Galaxy A35">Galaxy A35</option>
+                <option value="Galaxy A55">Galaxy A55</option>
+            </select>
+        </div>
+
+
+    <button onclick="compara()">Compară</button>
+</div>
+    <div id="rezultat"></div>
+</div>
+
+<script src="../scripts/compar.js"></script>
