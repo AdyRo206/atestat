@@ -1,4 +1,4 @@
-# Proiect Atestat - Site despre Telefoane Samsung
+# Proiect Atestat - Site despre Samsung
 
 # Descriere
 Acest proiect este un site web dedicat telefoanelor Samsung, care oferă informații despre istoria companiei, ecosistemul Samsung, aplicații și interfața utilizatorului, precum și un meniu pentru compararea a două modele de telefoane.
