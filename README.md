@@ -17,6 +17,6 @@ Mihai Marius Stroe
 ## Licență
 Acest proiect este licențiat sub Licența MIT.
 
-### Live preview
+## Live preview
 https://raw.githack.com/AdyRo206/atestat/refs/heads/main/index.html
 
