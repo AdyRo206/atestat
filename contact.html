@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1250, initial-scale=1.0">
+    <title>Samsung | Atestat</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+    <nav>
+        <div class="navbar">
+            <div class="navbrand">
+                <a href="index.html"><img src="assets/logo.jpg" alt="Logo"></a>
+            </div>
+            <ul>
+                <li><a href="istoric.html">Istoric</a></li>
+                <li><a href="dispozitive.html">Dispozitive</a></li>
+                <li><a href="ecosistem.html">Ecosistem Samsung</a></li>
+                <li><a href="apps&ui.html">Aplicații & UI </a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<div class="contact-page">
+    <h1>Contactează-ne</h1>
+    <p>Ai întrebări sau dorești să afli mai multe? Completează formularul de mai jos sau contactează-ne direct!</p>
+    
+    <div class="contact-container">
+        <!-- Formular de Contact -->
+        <div class="contact-form">
+            <form action="submit_form.php" method="post">
+                <label for="name">Nume:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Mesaj:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit">Trimite</button>
+            </form>
+        </div>
+        
+        <!-- Informații de Contact -->
+        <div class="contact-info">
+            <h3>Detalii Contact</h3> <br>
+            <p><strong>Email:</strong> vasile.adrian.gabriel2022@marinpreda.ro</p>
+            <p><strong>Telefon:</strong> +40 767 914 613</p>
+            <p><strong>Adresă:</strong> Strada Rușețu nr. 17, București, România</p>
+            
+            <h3>Urmărește-ne</h3>
+            <div class="social-links">
+                <a href="#" target="_blank">Facebook</a> |
+                <a href="#" target="_blank">Instagram</a> |
+                <a href="#" target="_blank">LinkedIn</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hartă Interactivă -->
+    <div class="map-container">
+        <iframe 
+        <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2623.137091763269!2d26.04993091548503!3d44.41867897910162!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b2c89f1b64a0e3%3A0x8c5d5c4b0c6be34a!2sStrada%20Rusetu%2017%2C%20Bucure%C8%99ti%2C%20Rom%C3%A2nia!5e0!3m2!1sen!2sro!4v1698716512381!5m2!1sen!2sro"
+        width="100%"
+        height="450"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"></iframe>
+    
+    </div>
+</div>
+
+<footer style="left: 0; bottom: 0; position: absolute; width: 100%;">
+    <div class="fleft">
+       a XII-a B |
+       <a href="http://marinpreda.ro" target="_blank">Liceul Teoretic Marin Preda</a>
+    </div>
+    <div class="fright">
+        &copy; 2026 Adrian Vasile | All rights reserved.
+    </div>
+</footer>
+
+</body>
+</html>

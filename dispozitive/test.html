@@ -11,13 +11,140 @@
         <div class="banner">
             <img src="../assets/s24.webp" alt="">
         </div>
-    </div>
 
+
+    <nav>
+            <a href="#" class="active">Blablabla</a>
+            <a href="#">Blablabla</a>
+            <a href="#">Blablabla</a>
+            <a href="#">Blablabla</a>
+            <a href="#">Blablabla</a>
+            <a href="#">Blablabla</a>
+            <a href="#">Blablabla</a>
+            <a href="#">Blablabla</a>
+    </nav>
+
+        <div class="card">
+            <img src="../assets/5g.webp" alt="nume" class="card-image">
+            
+            <div class="card-content">
+                <h3 class="card-title">Titlul </h3>
+                <p class="card-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis ratione nam provident iste totam eos beatae minus possimus, sapiente odit, tenetur dolore repellat aperiam officiis dolorem blanditiis eum at excepturi.</p>
+            </div>
+            
+            <a href="#" class="card-button">Vezi mai mult</a>
+        </div>
+        <div class="card">
+            <img src="imagine" alt="ceva nume" class="card-image">
+            
+            <div class="card-content">
+                <h3 class="card-title">Titlul </h3>
+                <p class="card-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis ratione nam provident iste totam eos beatae minus possimus, sapiente odit, tenetur dolore repellat aperiam officiis dolorem blanditiis eum at excepturi.</p>
+            </div>
+            
+            <a href="#" class="card-button">Vezi mai mult</a>
+        </div>
+<div class="card">
+    <img src="imagine" alt="ceva nume" class="card-image">
+    
+    <div class="card-content">
+        <h3 class="card-title">Titlul </h3>
+        <p class="card-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis ratione nam provident iste totam eos beatae minus possimus, sapiente odit, tenetur dolore repellat aperiam officiis dolorem blanditiis eum at excepturi.</p>
+    </div>
+    
+    <a href="#" class="card-button">Vezi mai mult</a>
+        </div>
+<div class="card">
+    <img src="imagine" alt="ceva nume" class="card-image">
+    
+    <div class="card-content">
+        <h3 class="card-title">Titlul </h3>
+        <p class="card-description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis ratione nam provident iste totam eos beatae minus possimus, sapiente odit, tenetur dolore repellat aperiam officiis dolorem blanditiis eum at excepturi.</p>
+    </div>
+    
+    <a href="#" class="card-button">Vezi mai mult</a>
+        </div>
+
+
+    <!--<div class="main-part">
+        <aside class="sidebar">
+            <ul>
+                <li>Muzeul Madame Tussauds</li>
+                <li>Muzeul Van Gogh</li>
+                <li>Muzeul Anne Frank</li>
+                <li>Fabrica Heineken</li>
+                <li>Monumentul Național</li>
+                <li>Piata Albert Cuyp</li>
+            </ul>
+        </aside>
+        
+        <main class="content">
+            <h2>Muzeul Van Gogh</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada. Nullam ac magna et mauris malesuada aliquet eget at dui.</p>
+            
+            <img src="../assets/5g.webp" alt="da" class="content-image">
+            
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin eget tortor risus. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Nulla porttitor accumsan tincidunt.</p>
+            
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sollicitudin molestie malesuada. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi.</p>
+        </main>
+    </div>-->
+
+    </div>
 </body>
 </html>
 
 <style>
-    .pagina1 {
+
+.card {
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    width: 600px;
+    background-color: #aaaaaa44;
+    border: 1px solid #ddd;
+    border-radius: 16px; 
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-image {
+    width: 150px;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-content {
+    flex: 1;
+    padding: 15px;
+}
+
+.card-title {
+    font-size: 1.2em;
+    margin-bottom: 8px;
+}
+
+.card-description {
+    font-size: 0.9em;
+    color: #555;
+}
+
+.card-button {
+    padding: 10px 20px;
+    margin-right: 15px;
+    background-color: violet;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.card-button:hover {
+    background-color: darkviolet;
+}
+
+.pagina1 {
         margin: 0;
         padding: 0;
         background-color: #cccccc; 
@@ -27,18 +154,76 @@
         width: 65%; 
         margin: 50px auto; 
         background-color: white; 
-        padding: 20px;
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
     }
 
     .banner{
+        width: 100%;
         margin: 0 auto;
         text-align: center;
     }
     
     .banner img{
-        height: 600px;
-        width: 1000px;
+        height: 350px;
+        width: 100%;
     }
+    
+    
+
+ /* prima pagina */
+
+/*.main-part{
+    display: flex;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #f4f4f4;
+    padding: 15px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+}
+
+.sidebar li {
+    padding: 10px 0;
+}
+
+.content {
+    padding: 20px;
+    flex: 1;
+}
+
+.content-image {
+    width: 100%;
+    max-width: 300px;
+    margin: 20px auto;
+    display: block; 
+}
+
+    nav{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+    }
+
+    nav a{
+        color: white;
+        text-decoration: none;
+        padding: 15px;
+    }
+
+    nav a:hover{
+        background-color: violet;
+    }
+
+    .active{
+        background-color: violet; 
+        color: black; 
+        font-weight: bold; 
+    }*/
+
     
     </style>
