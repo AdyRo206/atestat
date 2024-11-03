@@ -9,14 +9,14 @@ Acest proiect este un site web dedicat telefoanelor Samsung, care oferă informa
 - JavaScript
 
 ## Contribuții
-Acest proiect a fost realizat și dezvoltat de Vasile Adrian.
+Acest proiect a fost realizat și dezvoltat de Vasile Adrian Gabriel.
 
 ## Profesor Coordonator
-Mihai Marius Stroe
+Stroe Mihai Marius
 
 ## Licență
 Acest proiect este licențiat sub Licența MIT.
 
-### Live preview
+## Live preview
 https://raw.githack.com/AdyRo206/atestat/refs/heads/main/index.html
 
