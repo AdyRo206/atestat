@@ -223,6 +223,9 @@ footer{
     margin-top: 50px;
     align-items: center;
     align-self: center;
+    left: 0; 
+    bottom: 0;  
+    width: 100%;
 }
 
 footer a{
