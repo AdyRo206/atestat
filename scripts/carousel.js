@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const carouselImages = document.getElementById('carousel-images');
     const images = carouselImages.children;
     const totalImages = images.length;
-    let index = 0;
+    let i = 0;
     let interval;
 
     const firstImageClone = images[0].cloneNode(true);
@@ -11,12 +11,12 @@ document.addEventListener('DOMContentLoaded', function() {
     function updateCarousel() {
         const width = carouselImages.clientWidth;
         carouselImages.style.transition = 'transform 0.5s ease-in-out';
-        carouselImages.style.transform = `translateX(${-index * width}px)`;
+        carouselImages.style.transform = `translateX(${-i * width}px)`;
 
-        if (index === totalImages) {
+        if (i === totalImages) {
             setTimeout(() => {
                 carouselImages.style.transition = 'none';
-                index = 0;
+                i = 0;
                 carouselImages.style.transform = `translateX(0)`;
             }, 500); 
         }
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function startAutoSlide() {
         interval = setInterval(() => {
-            index++;
+            i++;
             updateCarousel();
         }, 4000); 
     }
@@ -34,14 +34,22 @@ document.addEventListener('DOMContentLoaded', function() {
         startAutoSlide();
     }
 
+    const videos = carouselImages.querySelectorAll('video');
+
+    videos.forEach(video => {
+        video.addEventListener('play', () => clearInterval(interval));
+        video.addEventListener('pause', resetInterval);
+        video.addEventListener('ended', resetInterval);
+    });
+
     document.getElementById('nextBtn').addEventListener('click', () => {
-        index++;
+        i++;
         updateCarousel();
         resetInterval();
     });
 
     document.getElementById('prevBtn').addEventListener('click', () => {
-        index = (index - 1 + totalImages) % totalImages;
+        i = (i - 1 + totalImages) % totalImages;
         updateCarousel();
         resetInterval();
     });
@@ -49,5 +57,3 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('resize', updateCarousel);
     startAutoSlide(); 
 });
-
-

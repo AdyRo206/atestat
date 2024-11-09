@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1250, initial-scale=1.0">
+    <title>Samsung | Atestat</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <nav>
+    <div class="navbar">
+        <div class="navbrand">
+            <a href="../index.html"><img src="../assets/logo.jpg" alt="Logo"></a>
+        </div>
+        <ul>
+            <li><a href="../istoric.html">Istoric</a></li>
+            <li><a href="../dispozitive.html" class="active"> Dispozitive</a></li>
+            <li><a href="../ecosistem.html">Ecosistem Samsung</a></li>
+            <li><a href="../apps&ui.html">Aplicații & UI </a></li>
+            <li><a href="../contact.html">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<table class="tv_grid">
+    <h1 class="tv_up_title">Descoperă-l pe cel potrivit</h1>
+    <tbody class="tv_table">
+        <tr>
+            <td class="tv_card">
+                <div class="tv_img"><img src="../assets/neo.avif" alt="TV"></div>
+                <div class="tv_title"><h3>Neo QLED</h3></div>
+                <div class="tv_desc"><p>O nouă experiență, mai WOW ca niciodată 4K & 8K</p></div>
+            </td>
+            <td class="tv_card">
+                <div class="tv_img"><img src="../assets/neo8k.avif" alt="TV"></div>
+                <div class="tv_title"><h3>Neo QLED 8K</h3></div>
+                <div class="tv_desc"><p>Excelența la superlativ, 8K</p></div>
+            </td>
+            <td class="tv_card">
+                <div class="tv_img"><img src="../assets/lifestyle.avif" alt="TV"></div>
+                <div class="tv_title"><h3>Televizoare Lifestyle</h3></div>
+                <div class="tv_desc"><p>Mai mult decât simple televizoare</p></div>
+            </td>
+        </tr>
+        <tr>
+            <td class="tv_card">
+                <div class="tv_img"><img src="../assets/uhd.avif" alt="TV"></div>
+                <div class="tv_title"><h3>Crystal UHD</h3></div>
+                <div class="tv_desc"><p>Culori cristaline, intense</p></div>
+            </td>
+            <td class="tv_card">
+                <div class="tv_img"><img src="../assets/qled.avif" alt="TV"></div>
+                <div class="tv_title"><h3>QLED</h3></div>
+                <div class="tv_desc"><p>Culori strălucitoare, de lungă durată</p></div>
+            </td>
+            <td class="tv_card">
+                <div class="tv_img"><img src="../assets/oled.avif" alt="TV"></div>
+                <div class="tv_title"><h3>OLED</h3></div>
+                <div class="tv_desc"><p>Negru infinit datorită pixelilor auto-iluminaţi</p></div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</head>
+<body>
+    <div class="finder_container">
+        <h1>Găsește Televizorul Perfect pentru Tine!</h1>
+
+        <div class="find_container">
+            <div class="question-container">
+                <label for="size">Ce dimensiune îți dorești?</label>
+                <select id="size">
+                    <option value="">Alege dimensiunea</option>
+                    <option value="32">32 inch</option>
+                    <option value="43">43 inch</option>
+                    <option value="55">55 inch</option>
+                    <option value="65">65 inch</option>
+                    <option value="75">75 inch</option>
+                </select>
+            </div>
+    
+            <div class="question-container">
+                <label for="technology">Ce tehnologie preferi?</label>
+                <select id="technology">
+                    <option value="">Alege tehnologia</option>
+                    <option value="qled">QLED</option>
+                    <option value="oled">OLED</option>
+                    <option value="led">LED</option>
+                </select>
+            </div>
+    
+            <div class="question-container">
+                <label for="resolution">Rezoluție?</label>
+                <select id="resolution">
+                    <option value="">Alege rezoluția</option>
+                    <option value="fullhd">Full HD</option>
+                    <option value="4k">4K</option>
+                    <option value="8k">8K</option>
+                </select>
+            </div>
+    
+            <div class="question-container">
+                <label for="budget">Buget estimat (Lei):</label>
+                <input type="number" id="budget" placeholder="Ex: 2500">
+            </div>
+        </div>
+
+        <button onclick="findProducts()" class="find_button">Găsește Televizoare</button>
+
+        <div id="results" class="result-container">
+            <h2>Televizoare recomandate:</h2>
+            <div id="productList"></div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="top-part">
+            <div class="top-item">
+                <h3>Produse</h3>
+                <ul>
+                    <li><a href="../dispozitive/telefoane.html">Telefoane</a></li>
+                    <li><a href="../dispozitive/tablete.html">Tablete</a></li>
+                    <li><a href="../dispozitive/tv.html">Televizoare</a></li>
+                    <li><a href="../dispozitive/buds.html">Galaxy Buds</a></li>
+                    <li><a href="../dispozitive/watch.html">Galaxy Watch</a></li>
+                    <li><a href="../dispozitive/monitoare.html">Monitoare</a></li>
+                </ul>
+            </div>
+            <div class="top-item right-item">
+                <h3>Suport Clienți</h3>
+                <ul>
+                    <li><a href="../contact.html">Contact</a></li>
+                    <li><a href="../dispozitive/comparatie.html">Compară 2 modele</a></li>
+                    <li><a href="../garantie.html">Formular Garanție</a></li>
+                    <li><a href="../termeni&conditii.html">Termeni și Condiții</a></li>
+                    <li><a href="https://anpc.ro/">ANPC</a></li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="anpc">
+            <a href="https://ec.europa.eu/consumers/odr/main/index.cfm?event=main.home2.show&lng=RO"><img src="../assets/litigii.avif" alt="Solutionarea Litigiilor" width="200px"></a>
+            <a href="https://anpc.ro/ce-este-sal/"><img src="../assets/anpc.avif" alt="ANPC" width="200px"></a>
+        </div>
+    
+        <div class="bottom-part">
+            <div class="fleft">
+                a XII-a B |
+                <a href="http://marinpreda.ro" target="_blank">Liceul Teoretic Marin Preda</a>
+             </div>
+             <div class="fright">
+                 &copy; 2026 Adrian Vasile | All rights reserved.
+             </div>
+        </div>
+    </footer>
+</body>
+</html>
+
+<script src="../scripts/finder.js"></script>
+<script src="../scripts/script.js"></script>
+
+

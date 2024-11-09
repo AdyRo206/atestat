@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formular Garanție</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f3f3f3;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .container {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 30px;
+            max-width: 600px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input, textarea, select {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 100%;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .terms {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Formular Garanție</h1>
+        <form id="warrantyForm">
+            <label for="name">Nume și Prenume:</label>
+            <input type="text" id="name" name="name" placeholder="Introdu numele complet" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Introdu adresa de email" required>
+
+            <label for="phone">Număr de Telefon:</label>
+            <input type="tel" id="phone" name="phone" placeholder="Introdu numărul de telefon" required>
+
+            <label for="product">Produs:</label>
+            <input type="text" id="product" name="product" placeholder="Introdu denumirea produsului" required>
+
+            <label for="serial">Număr Serie:</label>
+            <input type="text" id="serial" name="serial" placeholder="Introdu numărul de serie" required>
+
+            <label for="issue">Descriere Problemă:</label>
+            <textarea id="issue" name="issue" rows="4" placeholder="Descrie problema întâmpinată" required></textarea>
+
+            <label for="agree">
+                <input type="checkbox" id="agree" name="agree" required>
+                Sunt de acord cu termenii și condițiile
+            </label>
+
+            <button type="submit">Trimite Formular</button>
+        </form>
+
+        <div class="terms">
+            <h2>Termeni și Condiții pentru Garanție</h2>
+            <p>
+                1. Produsul trebuie trimis împreună cu certificatul de garanție și factura fiscală.
+            </p>
+            <p>
+                2. Garanția nu acoperă daunele cauzate de utilizare incorectă, accidente sau intervenții neautorizate.
+            </p>
+            <p>
+                3. Costurile de transport pentru trimiterea produsului în service sunt suportate de client.
+            </p>
+            <p>
+                4. Durata estimată pentru reparații este de 14 zile lucrătoare, în funcție de disponibilitatea pieselor.
+            </p>
+        </div>
+    </div>
+</body>
+</html>

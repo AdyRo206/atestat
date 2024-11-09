@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=1250, initial-scale=1.0">
-    <title>Samsung | Atestat</title>
+    <meta name="viewport" content="width=1400, initial-scale=1.0">
+    <title>Atestat | Acasă</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="assets/Favicon.png" sizes="96x96">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -24,14 +25,23 @@
             </ul>
         </div>
     </nav>
-</header>
+
 
 <section class="carousel">
     <div class="carousel-container">
         <div class="carousel-images" id="carousel-images">
+            <div class="carousel-slide">
+            <video src="assets/s24video3.mp4" autoplay muted loop alt="Samsung Demo Video"></video>
+            </div>
+            <div class="carousel-slide">
             <img src="assets/s24.webp" alt="Samsung Galaxy S24">
+            </div>
+            <div class="carousel-slide">
             <img src="assets/flip.jpg" alt="Samsung Galaxy Z Flip 6">
+            </div>
+            <div class="carousel-slide">
             <img src="assets/tab.jpg" alt="Samsung Galaxy Tab S10">
+            </div>
         </div>
         <div class="carousel-buttons">
             <button id="prevBtn">&lt;</button>
@@ -63,7 +73,7 @@
             </div>
         </div></td>
 
-        <td><div class="card-container invisible">
+        <td><!--<div class="card-container invisible">-->
         </div></td>
 
         <td><div class="card-container">
@@ -79,7 +89,7 @@
 
     </tr>
     <tr>
-        <td><div class="card-container invisible">
+        <td><!--<div class="card-container invisible">-->
         </div></td>
 
         <td><div class="card-container">
@@ -92,7 +102,7 @@
             </div>
         </div></td>
 
-        <td><div class="card-container invisible">
+        <td><!--<div class="card-container invisible">-->
         </div</td>
 
     </tr>
@@ -108,7 +118,7 @@
             </div>
         </div></td>
 
-        <td><div class="card-container invisible">
+        <td><!--<div class="card-container invisible">-->
         </div></td>
 
         <td> <div class="card-container">
@@ -149,7 +159,6 @@
       </div>
     </div>
   
-    <!-- Întrebările noi -->
     <div class="faq-item">
       <button class="faq-question">Cum actualizez software-ul pe un dispozitiv Samsung Galaxy?</button>
       <div class="faq-answer">
@@ -167,12 +176,43 @@
   </section>  
   
 <footer>
-    <div class="fleft">
-       a XII-a B |
-       <a href="http://marinpreda.ro" target="_blank">Liceul Teoretic Marin Preda</a>
+    <div class="top-part">
+        <div class="top-item">
+            <h3>Produse</h3>
+            <ul>
+                <li><a href="dispozitive/telefoane.html">Telefoane</a></li>
+                <li><a href="dispozitive/tablete.html">Tablete</a></li>
+                <li><a href="dispozitive/tv.html">Televizoare</a></li>
+                <li><a href="dispozitive/buds.html">Galaxy Buds</a></li>
+                <li><a href="dispozitive/watch.html">Galaxy Watch</a></li>
+                <li><a href="dispozitive/monitoare.html">Monitoare</a></li>
+            </ul>
+        </div>
+        <div class="top-item right-item">
+            <h3>Suport Clienți</h3>
+            <ul>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="dispozitive/comparatie.html">Compară 2 modele</a></li>
+                <li><a href="garantie.html">Formular Garanție</a></li>
+                <li><a href="termeni&conditii.html">Termeni și Condiții</a></li>
+                <li><a href="https://anpc.ro/">ANPC</a></li>
+            </ul>
+        </div>
     </div>
-    <div class="fright">
-        &copy; 2026 Adrian Vasile | All rights reserved.
+
+    <div class="anpc">
+        <a href="https://ec.europa.eu/consumers/odr/main/index.cfm?event=main.home2.show&lng=RO"><img src="assets/litigii.avif" alt="Solutionarea Litigiilor" width="200px"></a>
+        <a href="https://anpc.ro/ce-este-sal/"><img src="assets/anpc.avif" alt="ANPC" width="200px"></a>
+    </div>
+
+    <div class="bottom-part">
+        <div class="fleft">
+            a XII-a B |
+            <a href="http://marinpreda.ro" target="_blank">Liceul Teoretic Marin Preda</a>
+         </div>
+         <div class="fright">
+             &copy; 2026 Adrian Vasile | All rights reserved.
+         </div>
     </div>
 </footer>
 
@@ -182,3 +222,4 @@
 <script src="scripts/carousel.js"></script>
 <script src="scripts/faq.js"></script>
 <script src="scripts/script.js"></script>
+
