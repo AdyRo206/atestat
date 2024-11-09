@@ -354,12 +354,14 @@ footer a:hover{
 
 .istoric_left{
     margin-right: auto;
-    max-width: 50%;
+    max-width: 45%;
+    font-size: 17px;
 }
 
 .istoric_right{
     margin-left: auto;
-    width: 50%;
+    max-width: 45%;
+    font-size: 17px;
 }
 
 .ist_img {
