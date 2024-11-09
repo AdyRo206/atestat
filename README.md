@@ -9,7 +9,7 @@ Acest proiect este un site web dedicat telefoanelor Samsung, care oferă informa
 - JavaScript
 
 ## Contribuții
-Acest proiect a fost realizat și dezvoltat de Vasile Adrian Gabriel.
+Acest proiect a fost realizat și dezvoltat de Adrian Vasile.
 
 ## Profesor Coordonator
 Stroe Mihai Marius
