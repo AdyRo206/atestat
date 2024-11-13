@@ -31,26 +31,26 @@
         <span class="new-label">Nou</span>
         <img src="../assets/z_fold_6.webp" alt="Galaxy Z Fold6" width="500px">
         <h3 class="large_title">Galaxy Z Fold6</h3>
-        <a href="#" class="buy-now"><b>Cumpara Acum</b></a>
+        <a href="#" class="buy-now" ><b>Cumpara Acum</b></a>
     </div>
     <div class="product-grid-small">
         <div class="product-card">
             <span class="new-label">Nou</span>
             <img src="../assets/z_flip6.webp" alt="Galaxy Z Flip6">
             <h3>Galaxy Z Flip6</h3>
-            <a href="#" class="buy-now"><b>Cumpara Acum</b></a>
+            <a href="#" class="buy-now" ><b>Cumpara Acum</b></a>
         </div>
         <div class="product-card">
             <span class="super-label">Super Pret</span>
             <img src="../assets/galaxy_s24ultra.png" alt="Galaxy S24 Ultra">
             <h3>Galaxy S24 Ultra</h3>
-            <a href="#" class="buy-now"><b>Cumpara Acum</b></a>
+            <a href="#" class="buy-now" ><b>Cumpara Acum</b></a>
         </div>
         <div class="product-card">
             <span class="super-label">Super Pret</span>
             <img src="../assets/galaxy_s24.avif" alt="Galaxy S24 | S24+">
             <h3>Galaxy S24 | S24+</h3>
-            <a href="#" class="buy-now"><b>Cumpara Acum</b></a>
+            <a href="#" class="buy-now" ><b>Cumpara Acum</b></a>
         </div>
         <div class="product-card">
             <span class="new-label">Nou</span>
@@ -87,7 +87,7 @@
                     <span>⭐️⭐️⭐️⭐️⭐️</span>
                     <span>4.6 (2819)</span>
                 </div>
-<button class="buy-button" id="buy">Cumpără acum</button>
+<button class="buy-button" >Cumpără acum</button>
           </div>
         
           <div class="product-card-z">
@@ -109,7 +109,7 @@
                     <span>⭐️⭐️⭐️⭐️⭐️</span>
                     <span>4.7 (2319)</span>
                 </div>
-<button class="buy-button" id="buy">Cumpără acum</button>
+<button class="buy-button" >Cumpără acum</button>
           </div>
 
           <div class="product-card-z">
@@ -131,7 +131,7 @@
                     <span>⭐️⭐️⭐️⭐️⭐️</span>
                     <span>4.6 (2819)</span>
                 </div>
-<button class="buy-button" id="buy">Cumpără acum</button>
+<button class="buy-button" >Cumpără acum</button>
           </div>
     </div>
     <div class="more_btn"><a href="#">Vezi toate modelele</a></div>
@@ -162,7 +162,7 @@
                     <span>⭐️⭐️⭐️⭐️⭐️</span>
                     <span>4.8 (3523)</span>
                 </div>
-<button class="buy-button" id="buy">Cumpără acum</button>
+<button class="buy-button" >Cumpără acum</button>
           </div>
         
           <div class="product-card-z">
@@ -185,7 +185,7 @@
                     <span>⭐️⭐️⭐️⭐️⭐️</span>
                     <span>4.5 (209)</span>
                 </div>
-<button class="buy-button" id="buy">Cumpără acum</button>
+<button class="buy-button" >Cumpără acum</button>
           </div>
 
           <div class="product-card-z">
@@ -207,7 +207,7 @@
                     <span>⭐️⭐️⭐️⭐️⭐️</span>
                     <span>4.8 (2509)</span>
                 </div>
-<button class="buy-button" id="buy">Cumpără acum</button>
+<button class="buy-button" >Cumpără acum</button>
           </div>
     </div>
     <div class="more_btn"><a href="#">Vezi toate modelele</a></div>
@@ -238,7 +238,7 @@
                     <span>⭐️⭐️⭐️⭐️⭐️</span>
                     <span>4.5 (2329)</span>
                 </div>
-<button class="buy-button" id="buy">Cumpără acum</button>
+<button class="buy-button" >Cumpără acum</button>
           </div>
         
           <div class="product-card-z">
@@ -260,7 +260,7 @@
                     <span>⭐️⭐️⭐️⭐️⭐️</span>
                     <span>4.4 (209)</span>
                 </div>
-<button class="buy-button" id="buy">Cumpără acum</button>
+<button class="buy-button" >Cumpără acum</button>
           </div>
 
           <div class="product-card-z">
@@ -283,7 +283,7 @@
                     <span>⭐️⭐️⭐️⭐️⭐️</span>
                     <span>4.6 (2819)</span>
                 </div>
-<button class="buy-button" id="buy">Cumpără acum</button>
+<button class="buy-button" >Cumpără acum</button>
           </div>
     </div>
     <div class="more_btn"><a href="#">Vezi toate modelele</a></div>
@@ -336,39 +336,4 @@
 </body>
 </html>
 <script src="../scripts/script.js"></script>
-
-
-<script>
-    // Funcție pentru a crea un popup
-    function createPopup(message) {
-        const popupContainer = document.getElementById('popupContainer');
-        const popup = document.createElement('div');
-        popup.className = 'popup';
-        popup.innerHTML = `
-            ${message}
-            <div class="progress-bar"></div>
-        `;
-        
-        // Adăugăm popup-ul în container
-        popupContainer.appendChild(popup);
-
-        // Animație pentru bara de progres
-        const progressBar = popup.querySelector('.progress-bar');
-        setTimeout(() => {
-            progressBar.style.width = '0%';
-        }, 10); // Pornim animația imediat după adăugare
-
-        // Eliminăm popup-ul după 5 secunde
-        setTimeout(() => {
-            popup.remove();
-        }, 5000);
-    }
-
-    // Eveniment pentru toate butoanele de cumpărare
-    const buyButtons = document.querySelectorAll('.buy-button');
-    buyButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            createPopup("Produsul a fost adăugat în coș!");
-        });
-    });
-</script>
+<script src="../scripts/buy.js"></script>
