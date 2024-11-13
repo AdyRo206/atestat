@@ -23,6 +23,9 @@
         </div>
     </nav>
 
+    
+    <div id="popupContainer" class="popup-container"></div>
+
 <div class="product-grid">
     <div class="product-card large">
         <span class="new-label">Nou</span>
@@ -84,7 +87,7 @@
                     <span>⭐️⭐️⭐️⭐️⭐️</span>
                     <span>4.6 (2819)</span>
                 </div>
-            <button class="buy-button">Cumpără acum</button>
+<button class="buy-button" id="buy">Cumpără acum</button>
           </div>
         
           <div class="product-card-z">
@@ -106,7 +109,7 @@
                     <span>⭐️⭐️⭐️⭐️⭐️</span>
                     <span>4.7 (2319)</span>
                 </div>
-            <button class="buy-button">Cumpără acum</button>
+<button class="buy-button" id="buy">Cumpără acum</button>
           </div>
 
           <div class="product-card-z">
@@ -128,7 +131,7 @@
                     <span>⭐️⭐️⭐️⭐️⭐️</span>
                     <span>4.6 (2819)</span>
                 </div>
-            <button class="buy-button">Cumpără acum</button>
+<button class="buy-button" id="buy">Cumpără acum</button>
           </div>
     </div>
     <div class="more_btn"><a href="#">Vezi toate modelele</a></div>
@@ -159,7 +162,7 @@
                     <span>⭐️⭐️⭐️⭐️⭐️</span>
                     <span>4.8 (3523)</span>
                 </div>
-            <button class="buy-button">Cumpără acum</button>
+<button class="buy-button" id="buy">Cumpără acum</button>
           </div>
         
           <div class="product-card-z">
@@ -182,7 +185,7 @@
                     <span>⭐️⭐️⭐️⭐️⭐️</span>
                     <span>4.5 (209)</span>
                 </div>
-            <button class="buy-button">Cumpără acum</button>
+<button class="buy-button" id="buy">Cumpără acum</button>
           </div>
 
           <div class="product-card-z">
@@ -204,7 +207,7 @@
                     <span>⭐️⭐️⭐️⭐️⭐️</span>
                     <span>4.8 (2509)</span>
                 </div>
-            <button class="buy-button">Cumpără acum</button>
+<button class="buy-button" id="buy">Cumpără acum</button>
           </div>
     </div>
     <div class="more_btn"><a href="#">Vezi toate modelele</a></div>
@@ -235,7 +238,7 @@
                     <span>⭐️⭐️⭐️⭐️⭐️</span>
                     <span>4.5 (2329)</span>
                 </div>
-            <button class="buy-button">Cumpără acum</button>
+<button class="buy-button" id="buy">Cumpără acum</button>
           </div>
         
           <div class="product-card-z">
@@ -257,7 +260,7 @@
                     <span>⭐️⭐️⭐️⭐️⭐️</span>
                     <span>4.4 (209)</span>
                 </div>
-            <button class="buy-button">Cumpără acum</button>
+<button class="buy-button" id="buy">Cumpără acum</button>
           </div>
 
           <div class="product-card-z">
@@ -280,7 +283,7 @@
                     <span>⭐️⭐️⭐️⭐️⭐️</span>
                     <span>4.6 (2819)</span>
                 </div>
-            <button class="buy-button">Cumpără acum</button>
+<button class="buy-button" id="buy">Cumpără acum</button>
           </div>
     </div>
     <div class="more_btn"><a href="#">Vezi toate modelele</a></div>
@@ -333,3 +336,39 @@
 </body>
 </html>
 <script src="../scripts/script.js"></script>
+
+
+<script>
+    // Funcție pentru a crea un popup
+    function createPopup(message) {
+        const popupContainer = document.getElementById('popupContainer');
+        const popup = document.createElement('div');
+        popup.className = 'popup';
+        popup.innerHTML = `
+            ${message}
+            <div class="progress-bar"></div>
+        `;
+        
+        // Adăugăm popup-ul în container
+        popupContainer.appendChild(popup);
+
+        // Animație pentru bara de progres
+        const progressBar = popup.querySelector('.progress-bar');
+        setTimeout(() => {
+            progressBar.style.width = '0%';
+        }, 10); // Pornim animația imediat după adăugare
+
+        // Eliminăm popup-ul după 5 secunde
+        setTimeout(() => {
+            popup.remove();
+        }, 5000);
+    }
+
+    // Eveniment pentru toate butoanele de cumpărare
+    const buyButtons = document.querySelectorAll('.buy-button');
+    buyButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            createPopup("Produsul a fost adăugat în coș!");
+        });
+    });
+</script>

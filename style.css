@@ -423,11 +423,10 @@ footer a:hover{
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) rotate(45deg);
-    font-size: 24px;
     font-weight: bold;
     color: black;
     z-index: 10;
-    font-size: 80px;
+    font-size: 50px;
 }
 
 .no_function{
@@ -1325,4 +1324,29 @@ t_c a:hover {
     background-color: #007bff;
     color: white;
     transform: translateY(-10px);
+}
+
+.popup-container {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 300px;
+    z-index: 1000;
+}
+.popup {
+    background-color: #007bff;
+    color: white;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+.popup .progress-bar {
+    height: 4px;
+    background-color: white;
+    width: 100%;
+    border-radius: 4px;
+    margin-top: 10px;
+    transition: width 5s linear;
 }
