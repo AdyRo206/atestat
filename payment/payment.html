@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1400, initial-scale=1.0">
+    <title>Atestat | Acasă</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" type="image/png" href="assets/Favicon.png" sizes="96x96">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+    <nav>
+        <div class="navbar">
+            <div class="navbrand">
+                <a href="../index.html" class="active"><img src="../assets/logo.jpg" alt="Logo"></a>
+            </div>
+            <ul>
+                <li><a href="../istoric.html">Istoric</a></li>
+                <li><a href="../dispozitive.html">Dispozitive</a></li>
+                <li><a href="../ecosistem.html">Ecosistem Samsung</a></li>
+                <li><a href="../apps&ui.html">Aplicații & UI </a></li>
+                <li><a href="../contact.html">Contact</a></li>
+                <li><div class="cart-container">
+                    <a href="payment/cart.html" class="cart-icon" id="cart-icon">
+                        🛒<span id="cart-count">0</span>
+                    </a>
+                    <div class="cart-popup" id="cart-popup">
+                        <div id="cart-items"></div>
+                        <p>Total: <span id="cart-total">0.00 lei</span></p>
+                    </div>
+                </div></li>
+            </ul>
+        </div>
+    </nav>
+    <div id="delivery-section" class="payment-container">
+        <h1>Detalii de Livrare</h1>
+        <form id="delivery-form" onsubmit="return validateDeliveryForm()">
+            <div id="delivery-error" class="error-message"></div>
+    
+            <div class="form-group">
+                <label for="name">Nume complet:</label>
+                <input type="text" id="name" required>
+            </div>
+    
+            <div class="form-group">
+                <label for="address">Adresă:</label>
+                <input type="text" id="address" required>
+            </div>
+    
+            <div class="form-group">
+                <label for="phone">Telefon:</label>
+                <input type="text" id="phone" required>
+            </div>
+    
+            <button type="submit" class="btn btn-primary">Mergi mai departe</button>
+        </form>
+    </div>
+    
+    <div id="payment-section" class="payment-container" style="display: none;">
+        <h1>Introdu detaliile de plată</h1>
+    
+        <div id="payment-error" class="error-message"></div>
+    
+        <div class="card-input-container form-group">
+            <img id="card-logo" src="" alt="Card Logo" class="card-logo" style="display: none;">
+            <input type="text" id="card-number" placeholder="Număr card" maxlength="19" oninput="detectCardTypeAndUpdateLogo()" required>
+        </div>
+    
+        <div class="form-group">
+            <input type="text" id="card-name" placeholder="Numele pe card" required>
+        </div>
+    
+        <div class="form-group">
+            <input type="text" id="card-expiry" placeholder="MM/YY" required>
+        </div>
+    
+        <div class="form-group">
+            <input type="text" id="card-cvc" placeholder="CVC" required>
+        </div>
+    
+        <div class="payment-summary">
+            <p>Total: <span id="total-price">0 lei</span></p>
+            <p>TVA: <span id="tva">0 lei</span></p>
+            <p>Transport: <span id="transport">Gratuit</span></p>
+        </div>
+    
+        <div class="payment-buttons">
+            <button type="button" onclick="backToDelivery()" class="btn btn-secondary">Înapoi</button>
+            <button type="button" onclick="validatePaymentForm()" class="btn btn-primary" id="pay-button">Plătește</button>
+        </div>
+    </div>
+    
+
+<div id="loading-spinner" class="spinner-overlay" style="display: none;">
+    <div class="spinner"></div>
+</div>
+
+<div id="success-message" class="success-message" style="display: none;">
+    <p>Comanda a fost trimisă cu succes!</p>
+    <div class="checkmark">✔</div>
+</div>
+
+<script src="../scripts/cart.js"></script>

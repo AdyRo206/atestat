@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1400, initial-scale=1.0">
+    <title>Atestat | Acasă</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" type="image/png" href="assets/Favicon.png" sizes="96x96">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+    <nav>
+        <div class="navbar">
+            <div class="navbrand">
+                <a href="../index.html" class="active"><img src="../assets/logo.jpg" alt="Logo"></a>
+            </div>
+            <ul>
+                <li><a href="../istoric.html">Istoric</a></li>
+                <li><a href="../dispozitive.html">Dispozitive</a></li>
+                <li><a href="../ecosistem.html">Ecosistem Samsung</a></li>
+                <li><a href="../apps&ui.html">Aplicații & UI </a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="cart_page">
+        <h1>Coșul tău de cumpărături</h1>
+        <div id="cart-items"></div>
+        <div class="cart_total">
+            <h2>Total: <span id="total-price">0 lei</span></h2>
+            <a id="proceed-button" href="#" onclick="checkCartBeforeProceed()">Mergi mai departe</a>
+        </div>
+    </div>
+
+    <script src="../scripts/cart.js"></script>
