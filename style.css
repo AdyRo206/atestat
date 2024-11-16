@@ -1350,3 +1350,312 @@ t_c a:hover {
     margin-top: 10px;
     transition: width 5s linear;
 }
+
+.cart-container {
+    position: relative;
+    display: inline-block;
+}
+
+.cart-icon {
+    font-size: 24px;
+    color: #333;
+    cursor: pointer;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.cart-icon:hover {
+    color: #007acc;
+}
+
+#cart-count {
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 14px;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+}
+
+.cart-popup {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    width: 250px;
+    z-index: 1000;
+    border-radius: 10px;
+    transition: opacity 0.3s ease;
+}
+
+.cart-container:hover .cart-popup {
+    display: block;
+    opacity: 1;
+}
+
+.delete_button {
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
+    color: red;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: color 0.3s ease;
+}
+
+.delete_button:hover {
+    color: darkred;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    font-size: 18px;
+    border-bottom: 1px solid #ddd;
+}
+
+.cart-item p {
+    margin: 0;
+}
+
+#cart-items {
+    background-color: #fafafa;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.cart-popup #cart-items {
+    background-color: transparent;
+}
+
+.cart_total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 10px;
+    border-top: 3px solid #ccc;
+}
+
+.cart_total h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.cart_total a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px 20px;
+    background-color: #007acc;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.cart_total a:hover {
+    background-color: #005fa3;
+    transform: scale(1.05);
+}
+
+.cart_page {
+    text-align: center;
+    margin: 0 auto;
+    width: 40%;
+    max-width: 600px;
+}
+
+.cart_page h1 {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    font-size: 32px;
+}
+
+.cart_page p {
+    padding-top: 20px;
+    font-size: 18px;
+}
+
+.disabled {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+
+#payment-section{
+    display: none;
+}
+
+.card-input-container {
+    display: flex;
+    align-items: center;
+}
+
+.card-logo {
+    width: 40px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+.spinner-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.spinner {
+    border: 8px solid rgba(255, 255, 255, 0.3);
+    border-top: 8px solid #fff;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.success-message {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 128, 0, 0.9);
+    color: white;
+    font-size: 24px;
+    z-index: 1000;
+}
+
+.checkmark {
+    font-size: 50px;
+    margin-top: 20px;
+    animation: pop-in 0.5s ease-in-out forwards;
+}
+
+@keyframes pop-in {
+    0% { transform: scale(0); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.payment-container {
+    width: 80%;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.payment-container h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #007acc;
+}
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    background-color: #007acc;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #005f99;
+}
+
+.btn-secondary {
+    background-color: #ddd;
+    color: black;
+}
+
+.btn-secondary:hover {
+    background-color: #bbb;
+}
+
+.error-message {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.card-input-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.card-input-container input {
+    flex-grow: 1;
+}
+
+.card-logo {
+    width: 40px;
+    margin-left: 10px;
+}
+
+.payment-summary {
+    margin-top: 30px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+.payment-summary p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+.payment-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}

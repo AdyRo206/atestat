@@ -19,6 +19,15 @@
                 <li><a href="../ecosistem.html">Ecosistem Samsung</a></li>
                 <li><a href="../apps&ui.html">Aplicații & UI </a></li>
                 <li><a href="../contact.html">Contact</a></li>
+                <li><div class="cart-container">
+                    <a href="../payment/cart.html" class="cart-icon" id="cart-icon">
+                        🛒<span id="cart-count">0</span>
+                    </a>
+                    <div class="cart-popup" id="cart-popup">
+                        <div id="cart-items"></div>
+                        <p>Total: <span id="cart-total">0.00 lei</span></p>
+                    </div>
+                </div></li>
             </ul>
         </div>
     </nav>
@@ -31,32 +40,32 @@
         <span class="new-label">Nou</span>
         <img src="../assets/z_fold_6.webp" alt="Galaxy Z Fold6" width="500px">
         <h3 class="large_title">Galaxy Z Fold6</h3>
-        <a href="#" class="buy-now" ><b>Cumpara Acum</b></a>
+        <button onclick="addToCart('Samsung Galaxy Z Fold6 5G 512 Gb', 8479.99)" class="buy-now">Cumpără acum</button>
     </div>
     <div class="product-grid-small">
         <div class="product-card">
             <span class="new-label">Nou</span>
             <img src="../assets/z_flip6.webp" alt="Galaxy Z Flip6">
             <h3>Galaxy Z Flip6</h3>
-            <a href="#" class="buy-now" ><b>Cumpara Acum</b></a>
+            <button onclick="addToCart('Samsung Galaxy Z FLip6 5G 256 Gb', 5999.99)" class="buy-now">Cumpără acum</button>
         </div>
         <div class="product-card">
             <span class="super-label">Super Pret</span>
             <img src="../assets/galaxy_s24ultra.png" alt="Galaxy S24 Ultra">
             <h3>Galaxy S24 Ultra</h3>
-            <a href="#" class="buy-now" ><b>Cumpara Acum</b></a>
+            <button onclick="addToCart('Samsung Galaxy S24 Ultra 5G 1 Tb', 8999.99)" class="buy-now">Cumpără acum</button>
         </div>
         <div class="product-card">
             <span class="super-label">Super Pret</span>
             <img src="../assets/galaxy_s24.avif" alt="Galaxy S24 | S24+">
             <h3>Galaxy S24 | S24+</h3>
-            <a href="#" class="buy-now" ><b>Cumpara Acum</b></a>
+            <button onclick="addToCart('Samsung Galaxy S24 5G 256 Gb', 4299.99)" class="buy-now">Cumpără acum</button>
         </div>
         <div class="product-card">
             <span class="new-label">Nou</span>
             <img src="../assets/galaxy_s24fe.avif" alt="Galaxy S24 FE">
             <h3>Galaxy S24 FE</h3>
-            <a href="#" class="buy-now"><b>Cumpara Acum</b></a>
+            <button onclick="addToCart('Samsung Galaxy S24 FE 5G 256 Gb', 3999.99)" class="buy-now">Cumpără acum</button>
         </div>
     </div>
 </div>
@@ -87,7 +96,7 @@
                     <span>⭐️⭐️⭐️⭐️⭐️</span>
                     <span>4.6 (2819)</span>
                 </div>
-<button class="buy-button" >Cumpără acum</button>
+                <button onclick="addToCart('Samsung Galaxy Z Fold6 5G 512 Gb', 8479.99)" class="buy-button">Cumpără acum</button>
           </div>
         
           <div class="product-card-z">
@@ -109,7 +118,7 @@
                     <span>⭐️⭐️⭐️⭐️⭐️</span>
                     <span>4.7 (2319)</span>
                 </div>
-<button class="buy-button" >Cumpără acum</button>
+                <button onclick="addToCart('Samsung Galaxy Z FLip6 5G 256 Gb', 5999.99)" class="buy-button">Cumpără acum</button>
           </div>
 
           <div class="product-card-z">
@@ -131,7 +140,7 @@
                     <span>⭐️⭐️⭐️⭐️⭐️</span>
                     <span>4.6 (2819)</span>
                 </div>
-<button class="buy-button" >Cumpără acum</button>
+                <button onclick="addToCart('Samsung Galaxy Z Fold6 5G 256 Gb', 8999.99)" class="buy-button">Cumpără acum</button>
           </div>
     </div>
     <div class="more_btn"><a href="#">Vezi toate modelele</a></div>
@@ -162,7 +171,7 @@
                     <span>⭐️⭐️⭐️⭐️⭐️</span>
                     <span>4.8 (3523)</span>
                 </div>
-<button class="buy-button" >Cumpără acum</button>
+                <button onclick="addToCart('Samsung Galaxy S24 5G 256 Gb', 4299.99)" class="buy-button">Cumpără acum</button>
           </div>
         
           <div class="product-card-z">
@@ -185,7 +194,7 @@
                     <span>⭐️⭐️⭐️⭐️⭐️</span>
                     <span>4.5 (209)</span>
                 </div>
-<button class="buy-button" >Cumpără acum</button>
+                <button onclick="addToCart('Samsung Galaxy S24 FE 5G 256 Gb', 3999.99)" class="buy-button">Cumpără acum</button>
           </div>
 
           <div class="product-card-z">
@@ -207,7 +216,7 @@
                     <span>⭐️⭐️⭐️⭐️⭐️</span>
                     <span>4.8 (2509)</span>
                 </div>
-<button class="buy-button" >Cumpără acum</button>
+                <button onclick="addToCart('Samsung Galaxy S24 Ultra 5G 256 Gb', 5199.99)" class="buy-button">Cumpără acum</button>
           </div>
     </div>
     <div class="more_btn"><a href="#">Vezi toate modelele</a></div>
@@ -238,7 +247,7 @@
                     <span>⭐️⭐️⭐️⭐️⭐️</span>
                     <span>4.5 (2329)</span>
                 </div>
-<button class="buy-button" >Cumpără acum</button>
+                <button onclick="addToCart('Samsung Galaxy A35 5G 256 Gb', 1499.99)" class="buy-button">Cumpără acum</button>
           </div>
         
           <div class="product-card-z">
@@ -254,13 +263,13 @@
                 </div>
                 <div class="price">
                     <span style="color: rgba(255, 255, 255, 0);" class="old-price">&nbsp;</span>
-                    <span style="color: black;" class="new-price">1.099,99 lei</span>
+                    <span style="color: black;" class="new-price" data-price="1099.99">1.099,99 lei</span>
                   </div>
                 <div class="rating">
                     <span>⭐️⭐️⭐️⭐️⭐️</span>
                     <span>4.4 (209)</span>
                 </div>
-<button class="buy-button" >Cumpără acum</button>
+                <button onclick="addToCart('Samsung Galaxy A25 5G 256 Gb', 1099.99)" class="buy-button">Cumpără acum</button>
           </div>
 
           <div class="product-card-z">
@@ -283,15 +292,11 @@
                     <span>⭐️⭐️⭐️⭐️⭐️</span>
                     <span>4.6 (2819)</span>
                 </div>
-<button class="buy-button" >Cumpără acum</button>
+                <button onclick="addToCart('Samsung Galaxy A55 5G 256 Gb', 1899.99)" class="buy-button">Cumpără acum</button>
           </div>
     </div>
     <div class="more_btn"><a href="#">Vezi toate modelele</a></div>
 </section>
-
-<div class="compar">
-    <h1><a href="comparatie.html">Indecis? <br> Fă o comparație rapidă!</a></h1>
-</div>
 
 <footer>
     <div class="top-part">
@@ -337,3 +342,4 @@
 </html>
 <script src="../scripts/script.js"></script>
 <script src="../scripts/buy.js"></script>
+<script src="../scripts/cart.js"></script>

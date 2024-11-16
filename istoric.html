@@ -20,6 +20,15 @@
                 <li><a href="ecosistem.html">Ecosistem Samsung</a></li>
                 <li><a href="apps&ui.html">Aplicații & UI </a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li><div class="cart-container">
+                    <a href="payment/cart.html" class="cart-icon" id="cart-icon">
+                        🛒<span id="cart-count">0</span>
+                    </a>
+                    <div class="cart-popup" id="cart-popup">
+                        <div id="cart-items"></div>
+                        <p>Total: <span id="cart-total">0.00 lei</span></p>
+                    </div>
+                </div></li>
             </ul>
         </div>
     </nav>
@@ -133,3 +142,4 @@
 </html>
 
 <script src="scripts/script.js"></script>
+<script src="scripts/cart.js"></script>
