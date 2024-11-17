@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=1400, initial-scale=1.0">
     <title>Samsung | Atestat</title>
     <link rel="stylesheet" href="../style.css">
+    <link rel="icon" type="image/png" href="../assets/Favicon.png" sizes="96x96">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -18,11 +19,11 @@
             <ul>
                 <li><a href="../istoric.html">Istoric</a></li>
                 <li><a href="../dispozitive.html" class="active"> Dispozitive</a></li>
-                <li><a href="#">Ecosistem Samsung</a></li>
-                <li><a href="#">Aplicații & UI </a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="../ecosistem.html">Ecosistem Samsung</a></li>
+                <li><a href="../apps&ui.html">Aplicații & UI </a></li>
+                <li><a href="../contact.html">Contact</a></li>
                 <li><div class="cart-container">
-                    <a href="../cart.html" class="cart-icon" id="cart-icon">
+                    <a href="../payment/cart.html" class="cart-icon" id="cart-icon">
                         🛒<span id="cart-count">0</span>
                     </a>
                     <div class="cart-popup" id="cart-popup">
@@ -71,6 +72,65 @@
     <div id="rezultat"></div>
 </div>
 
-<script src="../scripts/compar.js"></script>
+<footer>
+    <div class="top-part">
+        <div class="top-item">
+            <h3>Produse</h3>
+            <ul>
+                <li><a href="../dispozitive/telefoane.html">Telefoane</a></li>
+                <li><a href="../dispozitive/tablete.html">Tablete</a></li>
+                <li><a href="../dispozitive/tv.html">Televizoare</a></li>
+                <li><a href="../dispozitive/watch.html">Galaxy Watch</a></li>
+            </ul>
+        </div>
+        <div class="top-item right-item">
+            <h3>Suport Clienți</h3>
+            <ul>
+                <li><a href="../contact.html">Contact</a></li>
+                <li><a href="../dispozitive/comparatie.html">Compară 2 modele</a></li>
+                <li><a href="../garantie.html">Formular Garanție</a></li>
+                <li><a href="../termeni&conditii.html">Termeni și Condiții</a></li>
+                <li><a href="https://anpc.ro/">ANPC</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="anpc">
+        <a href="https://ec.europa.eu/consumers/odr/main/index.cfm?event=main.home2.show&lng=RO"><img src="../assets/litigii.avif" alt="Solutionarea Litigiilor" width="200px"></a>
+        <a href="https://anpc.ro/ce-este-sal/"><img src="../assets/anpc.avif" alt="ANPC" width="200px"></a>
+    </div>
+
+    <div class="bottom-part">
+        <div class="fleft">
+            a XII-a B |
+            <a href="http://marinpreda.ro" target="_blank">Liceul Teoretic Marin Preda</a>
+         </div>
+         <div class="fright">
+             &copy; 2026 Adrian Vasile | All rights reserved.
+         </div>
+    </div>
+</footer>
+</body>
+</html>
+
+<script>
+function toggleDetails(event) {
+  event.preventDefault();
+  const extraRows = document.querySelectorAll('.extra-details');
+  const link = event.target;
+  
+  extraRows.forEach(row => {
+    row.classList.toggle('hidden');
+  });
+
+  if (link.textContent === 'Vezi mai multe') {
+    link.textContent = 'Vezi mai puține';
+  } else {
+    link.textContent = 'Vezi mai multe';
+  }
+}
+</script>
 <script src="../scripts/script.js"></script>
+<script src="../scripts/buy.js"></script>
 <script src="../scripts/cart.js"></script>
+<script src="../scripts/compar.js"></script>

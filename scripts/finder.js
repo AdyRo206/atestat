@@ -1,32 +1,85 @@
+function createPopup(message) {
+    const popupContainer = document.getElementById('popupContainer');
+    const popup = document.createElement('div');
+    popup.className = 'popup';
+    popup.innerHTML = `
+        ${message}
+        <div class="progress-bar"></div>
+    `;
+    
+    popupContainer.appendChild(popup);
+
+    const progressBar = popup.querySelector('.progress-bar');
+    setTimeout(() => {
+        progressBar.style.width = '100%';
+    }, 10);
+
+    setTimeout(() => {
+        popup.remove();
+    }, 5000);
+}
+
+function addToCart(productName, productPrice) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const product = { name: productName, price: productPrice };
+    cart.push(product);
+    localStorage.setItem('cart', JSON.stringify(cart));
+
+    updateCartDisplay();
+
+    createPopup("Produsul a fost adăugat în coș!");
+}
+
+function updateCartDisplay() {
+    const cartContainer = document.getElementById('cart-items');
+    const totalContainer = document.getElementById('total-price');
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+    cartContainer.innerHTML = '';
+    let totalPrice = 0;
+
+    cart.forEach(item => {
+        const itemElement = document.createElement('div');
+        itemElement.classList.add('cart-item');
+        itemElement.innerHTML = `
+            <span>${item.name}</span>
+            <span>${item.price} Lei</span>
+        `;
+        cartContainer.appendChild(itemElement);
+        totalPrice += item.price;
+    });
+
+    totalContainer.textContent = `${totalPrice} Lei`;
+}
+
 function findProducts() {
-    var size = document.getElementById("size").value;
-    var technology = document.getElementById("technology").value;
-    var resolution = document.getElementById("resolution").value;
-    var budget = document.getElementById("budget").value;
-    var resultsContainer = document.getElementById("results");
-    var productList = document.getElementById("productList");
-    var products = [
-        { name: "Samsung Crystal UHD", size: 55, technology: "led", resolution: "4k", price: 2500, image: "../assets/uhd.avif", buyLink: "#" },
-        { name: "Samsung QLED", size: 65, technology: "qled", resolution: "4k", price: 4500, image: "../assets/qled.avif", buyLink: "#" },
-        { name: "Samsung OLED", size: 75, technology: "oled", resolution: "8k", price: 6350, image: "../assets/oled.avif", buyLink: "#" },
-        { name: "Samsung Full HD", size: 43, technology: "led", resolution: "fullhd", price: 1099, image: "../assets/fullhd.avif", buyLink: "#" },
-        { name: "Samsung Neo QLED 8k", size: 55, technology: "qled", resolution: "8k", price: 12500, image: "../assets/neo8k.avif", buyLink: "#" },
-        { name: "Samsung QLED", size: 75, technology: "qled", resolution: "4k", price: 4200, image: "../assets/dispozitive_tv.png", buyLink: "#" },
+    const size = document.getElementById("size").value;
+    const technology = document.getElementById("technology").value;
+    const resolution = document.getElementById("resolution").value;
+    const budget = document.getElementById("budget").value;
+    const resultsContainer = document.getElementById("results");
+    const productList = document.getElementById("productList");
+
+    const products = [
+        { name: "Samsung Crystal UHD", size: 55, technology: "led", resolution: "4k", price: 2500, image: "../assets/uhd.avif" },
+        { name: "Samsung QLED", size: 65, technology: "qled", resolution: "4k", price: 4500, image: "../assets/qled.avif" },
+        { name: "Samsung OLED", size: 75, technology: "oled", resolution: "8k", price: 6350, image: "../assets/oled.avif" },
+        { name: "Samsung Full HD", size: 43, technology: "led", resolution: "fullhd", price: 1099, image: "../assets/fullhd.avif" },
+        { name: "Samsung Neo QLED 8k", size: 55, technology: "qled", resolution: "8k", price: 12500, image: "../assets/neo8k.avif" },
+        { name: "Samsung QLED", size: 75, technology: "qled", resolution: "4k", price: 4200, image: "../assets/dispozitive_tv.png" }
     ];
 
-    var filteredProducts = products.filter(function(product) {
-        return (
-            (size ? product.size == size : true) &&
-            (technology ? product.technology == technology : true) &&
-            (resolution ? product.resolution == resolution : true) &&
-            (budget ? product.price <= budget : true)
-        );
-    });
+    const filteredProducts = products.filter(product =>
+        (size ? product.size == size : true) &&
+        (technology ? product.technology == technology : true) &&
+        (resolution ? product.resolution == resolution : true) &&
+        (budget ? product.price <= budget : true)
+    );
 
     productList.innerHTML = '';
     if (filteredProducts.length > 0) {
-        filteredProducts.forEach(function(product) {
-            var productDiv = document.createElement("div");
+        filteredProducts.forEach(product => {
+            const productDiv = document.createElement("div");
             productDiv.classList.add("result-item");
             productDiv.innerHTML = `
                 <img src="${product.image}" alt="${product.name}">
@@ -37,7 +90,7 @@ function findProducts() {
                     <p>Rezoluție: ${product.resolution}</p>
                     <p>Preț: ${product.price} Lei</p>
                 </div>
-                <a class="buy-button">Cumpără</a>
+                <button class="buy-button" onclick="addToCart('${product.name}', ${product.price})">Cumpără</button>
             `;
             productList.appendChild(productDiv);
         });
@@ -46,32 +99,18 @@ function findProducts() {
     }
     
     resultsContainer.style.display = "block";
+}
 
-    function createPopup(message) {
-        const popupContainer = document.getElementById('popupContainer');
-        const popup = document.createElement('div');
-        popup.className = 'popup';
-        popup.innerHTML = `
-            ${message}
-            <div class="progress-bar"></div>
-        `;
-    
-        popupContainer.appendChild(popup);
-    
-        const progressBar = popup.querySelector('.progress-bar');
-        setTimeout(() => {
-            progressBar.style.width = '0%';
-        }, 10);
-    
-        setTimeout(() => {
-            popup.remove();
-        }, 5000);
-    }
-    
-    const buyButtons = document.querySelectorAll('.buy-button, .buy-now, .new_button');
+document.addEventListener('DOMContentLoaded', () => {
+    updateCartDisplay();
+
+    const buyButtons = document.querySelectorAll('.buy-button');
     buyButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            createPopup("Produsul a fost adăugat în coș!");
+        button.addEventListener('click', (event) => {
+            const productName = event.target.dataset.name;
+            const productPrice = parseFloat(event.target.dataset.price);
+            addToCart(productName, productPrice);
         });
     });
-}
+});
+

@@ -1348,7 +1348,7 @@ t_c a:hover {
     width: 100%;
     border-radius: 4px;
     margin-top: 10px;
-    transition: width 5s linear;
+    transition: width 3.5s linear;
 }
 
 .cart-container {
@@ -1659,3 +1659,4 @@ t_c a:hover {
     justify-content: space-between;
     margin-top: 20px;
 }
+

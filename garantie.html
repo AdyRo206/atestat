@@ -1,117 +1,240 @@
 <!DOCTYPE html>
-<html lang="ro">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formular Garanție</title>
+    <meta name="viewport" content="width=1400, initial-scale=1.0">
+    <title>Atestat | Acasă</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="assets/Favicon.png" sizes="96x96">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+    <nav>
+        <div class="navbar">
+            <div class="navbrand">
+                <a href="index.html" class="active"><img src="assets/logo.jpg" alt="Logo"></a>
+            </div>
+            <ul>
+                <li><a href="istoric.html">Istoric</a></li>
+                <li><a href="dispozitive.html">Dispozitive</a></li>
+                <li><a href="ecosistem.html">Ecosistem Samsung</a></li>
+                <li><a href="apps&ui.html">Aplicații & UI </a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><div class="cart-container">
+                    <a href="payment/cart.html" class="cart-icon" id="cart-icon">
+                        🛒<span id="cart-count">0</span>
+                    </a>
+                    <div class="cart-popup" id="cart-popup">
+                        <div id="cart-items"></div>
+                        <p>Total: <span id="cart-total">0.00 lei</span></p>
+                    </div>
+                </div></li>
+            </ul>
+        </div>
+    </nav>
+
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f3f3f3;
-            padding: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
+        header {
+            text-align: center;
+            margin-top: 50px;
         }
 
         .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
             background-color: #fff;
-            border-radius: 10px;
-            padding: 30px;
-            max-width: 600px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        h1 {
+        .form-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .form-box {
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-box h3 {
+            text-align: center;
+            color: #007acc
+        }
+
+        .form-box label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        .form-box input, .form-box textarea, .form-box select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+            background-color: #f9f9f9;
+        }
+
+        .form-box button {
+            background-color: #007acc;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 4px;
+            width: 100%;
+        }
+
+        .form-box button:hover {
+            background-color: #0161a1;
+        }
+
+        .terms-section {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #f1f1f1;
+            border-radius: 8px;
+        }
+
+        .terms-section h3 {
             text-align: center;
             color: #333;
         }
 
-        form {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        label {
-            font-weight: bold;
-        }
-
-        input, textarea, select {
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            width: 100%;
-        }
-
-        button {
-            background-color: #007bff;
-            color: white;
-            border: none;
-            padding: 12px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        button:hover {
-            background-color: #0056b3;
-        }
-
-        .terms {
-            background-color: #f9f9f9;
-            padding: 15px;
-            border-radius: 5px;
-            margin-top: 20px;
+        .terms-section p {
+            color: #555;
+            font-size: 14px;
+            line-height: 1.6;
         }
     </style>
-</head>
-<body>
-    <div class="container">
-        <h1>Formular Garanție</h1>
-        <form id="warrantyForm">
-            <label for="name">Nume și Prenume:</label>
-            <input type="text" id="name" name="name" placeholder="Introdu numele complet" required>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Introdu adresa de email" required>
+<header>
+    <h1>Formulare de Retur și Garanție</h1>
+</header>
 
-            <label for="phone">Număr de Telefon:</label>
-            <input type="tel" id="phone" name="phone" placeholder="Introdu numărul de telefon" required>
+<div class="container">
+    <h2>Completează formularul în funcție de solicitarea ta</h2>
 
-            <label for="product">Produs:</label>
-            <input type="text" id="product" name="product" placeholder="Introdu denumirea produsului" required>
+    <div class="form-container">
+        <label for="form-option">Alege opțiunea dorită:</label>
+        <select id="form-option" onchange="toggleForm()">
+            <option value="">Selectează...</option>
+            <option value="return">Retur</option>
+            <option value="warranty">Garanție</option>
+        </select>
+        <div id="return-form" class="form-box" style="display:none;">
+            <h3>Formular Retur</h3>
+            <form>
+                <label for="return-name">Nume complet</label>
+                <input type="text" id="return-name" name="return-name" required>
 
-            <label for="serial">Număr Serie:</label>
-            <input type="text" id="serial" name="serial" placeholder="Introdu numărul de serie" required>
+                <label for="return-email">Email</label>
+                <input type="email" id="return-email" name="return-email" required>
 
-            <label for="issue">Descriere Problemă:</label>
-            <textarea id="issue" name="issue" rows="4" placeholder="Descrie problema întâmpinată" required></textarea>
+                <label for="return-product">Produs returnat</label>
+                <input type="text" id="return-product" name="return-product" required>
 
-            <label for="agree">
-                <input type="checkbox" id="agree" name="agree" required>
-                Sunt de acord cu termenii și condițiile
-            </label>
+                <label for="return-reason">Motivul returului</label>
+                <textarea id="return-reason" name="return-reason" rows="4" required></textarea>
 
-            <button type="submit">Trimite Formular</button>
-        </form>
+                <button type="submit">Trimite Formularul</button>
+            </form>
+        </div>
+        <div id="warranty-form" class="form-box" style="display:none;">
+            <h3>Formular Garanție</h3>
+            <form>
+                <label for="warranty-name">Nume complet</label>
+                <input type="text" id="warranty-name" name="warranty-name" required>
 
-        <div class="terms">
-            <h2>Termeni și Condiții pentru Garanție</h2>
-            <p>
-                1. Produsul trebuie trimis împreună cu certificatul de garanție și factura fiscală.
-            </p>
-            <p>
-                2. Garanția nu acoperă daunele cauzate de utilizare incorectă, accidente sau intervenții neautorizate.
-            </p>
-            <p>
-                3. Costurile de transport pentru trimiterea produsului în service sunt suportate de client.
-            </p>
-            <p>
-                4. Durata estimată pentru reparații este de 14 zile lucrătoare, în funcție de disponibilitatea pieselor.
-            </p>
+                <label for="warranty-email">Email</label>
+                <input type="email" id="warranty-email" name="warranty-email" required>
+
+                <label for="warranty-product">Produs în garanție</label>
+                <input type="text" id="warranty-product" name="warranty-product" required>
+
+                <label for="warranty-issue">Problema produsului</label>
+                <textarea id="warranty-issue" name="warranty-issue" rows="4" required></textarea>
+
+                <button type="submit">Trimite Formularul</button>
+            </form>
         </div>
     </div>
+    <div class="terms-section">
+        <h3>Termeni de Returnare și Garanție</h3>
+        <p>1. Produsele pot fi returnate în termen de 14 zile de la achiziționare, în stare originală, neutilizate și cu ambalajul intact.</p>
+        <p>2. Produsele returnate trebuie însoțite de factura originală și formularul de retur completat.</p>
+        <p>3. Costurile de transport pentru retur vor fi suportate de către client, cu excepția cazului în care produsul este defect.</p>
+        <p>4. Garanția produselor este valabilă pe o perioadă de 12 luni de la data achiziționării. Orice defect ce apare în această perioadă va fi reparat sau înlocuit conform politicii de garanție.</p>
+        <p>5. Pentru orice solicitare de garanție, vă rugăm să completați formularul corespunzător și să ne furnizați informațiile necesare.</p>
+    </div>
+</div>
+
+<footer>
+    <div class="top-part">
+        <div class="top-item">
+            <h3>Produse</h3>
+            <ul>
+                <li><a href="dispozitive/telefoane.html">Telefoane</a></li>
+                <li><a href="dispozitive/tablete.html">Tablete</a></li>
+                <li><a href="dispozitive/tv.html">Televizoare</a></li>
+                <li><a href="dispozitive/watch.html">Galaxy Watch</a></li>
+            </ul>
+        </div>
+        <div class="top-item right-item">
+            <h3>Suport Clienți</h3>
+            <ul>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="dispozitive/comparatie.html">Compară 2 modele</a></li>
+                <li><a href="garantie.html">Formular Garanție</a></li>
+                <li><a href="termeni&conditii.html">Termeni și Condiții</a></li>
+                <li><a href="https://anpc.ro/">ANPC</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="anpc">
+        <a href="https://ec.europa.eu/consumers/odr/main/index.cfm?event=main.home2.show&lng=RO"><img src="assets/litigii.avif" alt="Solutionarea Litigiilor" width="200px"></a>
+        <a href="https://anpc.ro/ce-este-sal/"><img src="assets/anpc.avif" alt="ANPC" width="200px"></a>
+    </div>
+
+    <div class="bottom-part">
+        <div class="fleft">
+            a XII-a B |
+            <a href="http://marinpreda.ro" target="_blank">Liceul Teoretic Marin Preda</a>
+         </div>
+         <div class="fright">
+             &copy; 2026 Adrian Vasile | All rights reserved.
+         </div>
+    </div>
+</footer>
+
+<script>
+    function toggleForm() {
+        const formOption = document.getElementById('form-option').value;
+        const returnForm = document.getElementById('return-form');
+        const warrantyForm = document.getElementById('warranty-form');
+        
+        if (formOption === 'return') {
+            returnForm.style.display = 'block';
+            warrantyForm.style.display = 'none';
+        } else if (formOption === 'warranty') {
+            returnForm.style.display = 'none';
+            warrantyForm.style.display = 'block';
+        } else {
+            returnForm.style.display = 'none';
+            warrantyForm.style.display = 'none';
+        }
+    }
+</script>
+
 </body>
 </html>

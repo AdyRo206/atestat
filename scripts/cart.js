@@ -94,11 +94,27 @@ document.addEventListener('DOMContentLoaded', () => {
         const cart = JSON.parse(localStorage.getItem('cart')) || [];
         cartItemsContainer.innerHTML = '';
         let total = 0;
+        
+        if (cart.length === 0) {
+            cartItemsContainer.innerHTML = '<p>Coșul este gol!</p>';
+            cartTotal.textContent = '0 lei';
+            cartCount.textContent = '0';
+            return;
+        }
 
-        cart.forEach(item => {
-            const div = document.createElement('div');
-            div.textContent = `${item.name} - ${item.price} lei`;
-            cartItemsContainer.appendChild(div);
+        cart.forEach((item, index) => {
+            const itemElement = document.createElement('div');
+            itemElement.className = 'cart-item';
+            itemElement.innerHTML = `
+                <div class="left_cart">
+                    <p>${item.name}</p>
+                    <p>${item.price} lei</p>
+                </div>
+                <div class="right_cart">
+                    <button class="delete_button" onclick="removeFromCart(${index})">x</button>
+                </div>
+            `;
+            cartItemsContainer.appendChild(itemElement);
             total += parseFloat(item.price);
         });
 
@@ -109,7 +125,8 @@ document.addEventListener('DOMContentLoaded', () => {
     loadCart();
 
     cartIcon.addEventListener('click', () => {
-        window.location.href = 'cart.html';
+        cartPopup.classList.toggle('show');
+        loadCart();
     });
 });
 
@@ -158,7 +175,7 @@ function detectCardTypeAndUpdateLogo() {
     let logoSrc = "";
     switch (cardType) {
         case "visa":
-            logoSrc = "../assets/visa.png";
+            logoSrc = "../assets/Visa.png";
             break;
         case "mastercard":
             logoSrc = "../assets/mastercard.png";

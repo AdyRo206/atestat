@@ -16,7 +16,7 @@ function createPopup(message) {
 
     setTimeout(() => {
         popup.remove();
-    }, 5000);
+    }, 3500);
 }
 
 const buyButtons = document.querySelectorAll('.buy-button, .buy-now, .new_button');

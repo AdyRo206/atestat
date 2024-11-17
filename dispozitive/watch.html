@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1400, initial-scale=1.0">
+    <title>Samsung | Atestat</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="icon" type="image/png" href="../assets/Favicon.png" sizes="96x96">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="popupContainer" class="popup-container"></div>
+  <nav>
+    <div class="navbar">
+        <div class="navbrand">
+            <a href="../index.html"><img src="../assets/logo.jpg" alt="Logo"></a>
+        </div>
+        <ul>
+            <li><a href="../istoric.html">Istoric</a></li>
+            <li><a href="../dispozitive.html" class="active"> Dispozitive</a></li>
+            <li><a href="../ecosistem.html">Ecosistem Samsung</a></li>
+            <li><a href="../apps&ui.html">Aplicații & UI </a></li>
+            <li><a href="../contact.html">Contact</a></li>
+            <li><div class="cart-container">
+              <a href="../payment/cart.html" class="cart-icon" id="cart-icon">
+                  🛒<span id="cart-count">0</span>
+              </a>
+              <div class="cart-popup" id="cart-popup">
+                  <div id="cart-items"></div>
+                  <p>Total: <span id="cart-total">0.00 lei</span></p>
+              </div>
+          </div></li>
+        </ul>
+    </div>
+</nav>
+
+    <h1 class="new_tablet-title">Ce este nou</h1>
+
+<section class="new_tablet">
+    <div class="new_card">
+          <div class="new_title">
+            <h1>Galaxy Watch Ultra</h1>
+          </div>
+          <div class="new_desc">
+            <p>&nbsp;</p>
+          </div>
+          <button onclick="addToCart('Galaxy Watch Ultra', 2499.99)" class="new_button">Cumpără acum</button>
+          <div class="new_img">
+            <img src="../assets/watch_ultra.avif" alt="">
+          </div>
+    </div>
+    <div class="new_card">
+          <div class="new_title">
+            <h1>Galaxy Watch7</h1>
+          </div>
+          <div class="new_desc">
+            <p>&nbsp;</p>
+          </div>
+          <button onclick="addToCart('Galaxy Watch7', 1999.99)" class="new_button">Cumpără acum</button>
+          <div class="new_img">
+            <img src="../assets/watch7.avif" alt="">
+          </div>
+    </div>
+
+    <div class="new_card">
+        <div class="new_title">
+          <h1>Galaxy Watch6 Classic</h1>
+        </div>
+        <div class="new_desc">
+          <p>&nbsp;</p>
+        </div>
+        <button onclick="addToCart('Galaxy Watch6 Classic', 1799.99)" class="new_button">Cumpără acum</button>
+        <div class="new_img">
+          <img src="../assets/Watch6_classic.avif" alt="">
+        </div>
+  </div>
+</section>
+
+<section class="galaxy_z">
+    <div class="galaxyz_top">
+            <h1>Watch 40 - 43mm</h1>
+        </div>
+    </div>
+    <div class="galaxyz_bottom">
+        <div class="product-card-z">
+                <div class="img-container">
+                    <img src="../assets/galaxyfe_40.avif" alt="Galaxy Z Fold6">
+                </div>
+                <h2>Watch FE 40mm</h2>
+                    <p><strong>Culoare :</strong> Black</p>
+                <div class="price">
+                    <span style="color: rgba(255, 255, 255, 0);" class="old-price">&nbsp;</span>
+                    <span style="color: black;" class="new-price">1.099,99 lei</span>
+                  </div>
+                <div class="rating">
+                    <span>⭐️⭐️⭐️⭐️⭐️</span>
+                    <span>4.5 (2329)</span>
+                </div>
+                <button onclick="addToCart('Galaxy Watch FE, 40mm', 1099.99)" class="buy-button">Cumpără acum</button>
+          </div>
+        
+          <div class="product-card-z">
+                <div class="img-container">
+                    <img src="../assets/galaxy fit3.webp" alt="Galaxy Z Fold6">
+                </div>
+                <h2>Galaxy Fit3</h2>
+                    <p><strong>Culoare :</strong> Grey</p>
+                <div class="price">
+                    <span style="color: rgba(255, 255, 255, 0);" class="old-price">&nbsp;</span>
+                    <span style="color: black;" class="new-price" data-price="249.99">249,99 lei</span>
+                  </div>
+                <div class="rating">
+                    <span>⭐️⭐️⭐️⭐️⭐️</span>
+                    <span>4.4 (209)</span>
+                </div>
+                <button onclick="addToCart('Galaxy Fit3, Grey', 249.99)" class="buy-button">Cumpără acum</button>
+          </div>
+
+          <div class="product-card-z">
+                <div class="img-container">
+                    <span class="super-label">-400 lei</span>
+                    <img src="../assets/watch6_43.avif" alt="Galaxy Z Fold6">
+                </div>
+                <h2>Galaxy Watch6 43mm</h2>
+                    <p><strong>Culoare :</strong> Black</p>
+                <div class="price">
+                    <span class="old-price">1.699,00 lei</span>
+                    <span class="new-price">1.299,99 lei</span>
+                  </div>
+                <div class="rating">
+                    <span>⭐️⭐️⭐️⭐️⭐️</span>
+                    <span>4.6 (2819)</span>
+                </div>
+                <button onclick="addToCart('Galaxy Watch6, 43mm', 1299.99)" class="buy-button">Cumpără acum</button>
+          </div>
+          <div class="product-card-z">
+            <div class="img-container">
+                <span class="super-label">-150 lei</span>
+                <img src="../assets/watch6_40.avif" alt="Galaxy Z Fold6">
+            </div>
+            <h2>Galaxy Watch6 40mm</h2>
+                <p><strong>Culoare :</strong> Black</p>
+            <div class="price">
+                <span class="old-price">1.499,00 lei</span>
+                <span class="new-price">1.349,99 lei</span>
+              </div>
+            <div class="rating">
+                <span>⭐️⭐️⭐️⭐️⭐️</span>
+                <span>4.6 (2819)</span>
+            </div>
+            <button onclick="addToCart('Galaxy Watch6, 40mm', 1349.99)" class="buy-button">Cumpără acum</button>
+      </div>
+    </div>
+</section>
+
+<section class="galaxy_z">
+    <div class="galaxyz_top">
+            <h1>Watch 44 - 47mm</h1>
+        </div>
+    </div>
+    <div class="galaxyz_bottom">
+        <div class="product-card-z">
+            <span class="super-label">-250 lei</span>
+                <div class="img-container">
+                    <img src="../assets/watch6_47.avif" alt="Galaxy Z Fold6">
+                </div>
+                <h2>Galaxy Watch6 47mm</h2>
+                    <p><strong>Culoare :</strong> Silver</p>
+                <div class="price">
+                    <span class="old-price">1.749,99</span>
+                    <span class="new-price">1.499,99 lei</span>
+                  </div>
+                <div class="rating">
+                    <span>⭐️⭐️⭐️⭐️⭐️</span>
+                    <span>4.5 (2329)</span>
+                </div>
+                <button onclick="addToCart('Galaxy Watch6, 47mm', 1499.99)" class="buy-button">Cumpără acum</button>
+          </div>
+        
+          <div class="product-card-z">
+                <div class="img-container">
+                    <img src="../assets/watch_ultra.avif" alt="Galaxy Z Fold6">
+                </div>
+                <h2>Galaxy Watch Ultra</h2>
+                    <p><strong>Culoare :</strong> Orange</p>
+                <div class="price">
+                    <span style="color: rgba(255, 255, 255, 0);" class="old-price">&nbsp;</span>
+                    <span style="color: black;" class="new-price" data-price="1099.99">2499,99 lei</span>
+                  </div>
+                <div class="rating">
+                    <span>⭐️⭐️⭐️⭐️⭐️</span>
+                    <span>4.4 (209)</span>
+                </div>
+                <button onclick="addToCart('Galaxy Watch Ultra', 2499.99)" class="buy-button">Cumpără acum</button>
+          </div>
+
+          <div class="product-card-z">
+                <div class="img-container">
+                    <span class="new-label">Best Deal</span>
+                    <img src="../assets/galaxy5_pro_45.avif" alt="Galaxy Z Fold6">
+                </div>
+                <h2>Watch5 Pro 45mm</h2>
+                    <p><strong>Culoare :</strong> Black</p>
+                <div class="price">
+                    <span style="color: rgba(255, 255, 255, 0);" class="old-price">&nbsp;</span>
+                    <span style="color: black;" class="new-price">1.199,99 lei</span>
+                  </div>
+                <div class="rating">
+                    <span>⭐️⭐️⭐️⭐️⭐️</span>
+                    <span>4.6 (2819)</span>
+                </div>
+                <button onclick="addToCart('Watch5 Pro, 45mm', 1199.99)" class="buy-button">Cumpără acum</button>
+          </div>
+          <div class="product-card-z">
+            <div class="img-container">
+                <img src="../assets/watch5_45.avif" alt="Galaxy Z Fold6">
+            </div>
+            <h2>Galaxy Watch5 45mm</h2>
+                <p><strong>Culoare :</strong> Grey</p>
+            <div class="price">
+                <span style="color: rgba(255, 255, 255, 0);" class="old-price">&nbsp;</span>
+                <span style="color: black;" class="new-price">1.299,99 lei</span>
+              </div>
+            <div class="rating">
+                <span>⭐️⭐️⭐️⭐️⭐️</span>
+                <span>4.6 (2819)</span>
+            </div>
+            <button onclick="addToCart('Galaxy Watch5, 45mm', 1299.99)" class="buy-button">Cumpără acum</button>
+      </div>
+    </div>
+</section>
+
+<footer>
+    <div class="top-part">
+        <div class="top-item">
+            <h3>Produse</h3>
+            <ul>
+                <li><a href="../dispozitive/telefoane.html">Telefoane</a></li>
+                <li><a href="../dispozitive/tablete.html">Tablete</a></li>
+                <li><a href="../dispozitive/tv.html">Televizoare</a></li>
+                <li><a href="../dispozitive/watch.html">Galaxy Watch</a></li>
+            </ul>
+        </div>
+        <div class="top-item right-item">
+            <h3>Suport Clienți</h3>
+            <ul>
+                <li><a href="../contact.html">Contact</a></li>
+                <li><a href="../dispozitive/comparatie.html">Compară 2 modele</a></li>
+                <li><a href="../garantie.html">Formular Garanție</a></li>
+                <li><a href="../termeni&conditii.html">Termeni și Condiții</a></li>
+                <li><a href="https://anpc.ro/">ANPC</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="anpc">
+        <a href="https://ec.europa.eu/consumers/odr/main/index.cfm?event=main.home2.show&lng=RO"><img src="../assets/litigii.avif" alt="Solutionarea Litigiilor" width="200px"></a>
+        <a href="https://anpc.ro/ce-este-sal/"><img src="../assets/anpc.avif" alt="ANPC" width="200px"></a>
+    </div>
+
+    <div class="bottom-part">
+        <div class="fleft">
+            a XII-a B |
+            <a href="http://marinpreda.ro" target="_blank">Liceul Teoretic Marin Preda</a>
+         </div>
+         <div class="fright">
+             &copy; 2026 Adrian Vasile | All rights reserved.
+         </div>
+    </div>
+</footer>
+</body>
+</html>
+<script src="../scripts/script.js"></script>
+<script src="../scripts/buy.js"></script>
+<script src="../scripts/cart.js"></script>
