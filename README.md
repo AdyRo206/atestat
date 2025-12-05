@@ -12,7 +12,7 @@ Acest proiect este un site web dedicat telefoanelor Samsung, care oferă informa
 Acest proiect a fost realizat și dezvoltat de Adrian Vasile.
 
 ## Profesor Coordonator
-Stroe Mihai Marius
+Boiangiu Milena
 
 ## Licență
 Acest proiect este licențiat sub Licența MIT.
